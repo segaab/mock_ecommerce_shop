@@ -1,10 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ShoppingBag } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import MainNav from "@/components/main-nav"
 import Footer from "@/components/footer"
 import { FilterBar } from "@/components/filter-bar"
 
@@ -16,26 +13,6 @@ export const metadata = {
 export default function ShoesPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-40 border-b bg-background">
-        <div className="container flex h-16 items-center justify-between py-4">
-          <div className="flex items-center gap-6 md:gap-10">
-            <Link href="/" className="flex items-center space-x-2">
-              <ShoppingBag className="h-6 w-6" />
-              <span className="font-bold inline-block">ACME Store</span>
-            </Link>
-            <MainNav />
-          </div>
-          <div className="flex items-center gap-4">
-            <Link href="/checkout">
-              <Button variant="outline" size="icon">
-                <ShoppingBag className="h-5 w-5" />
-                <span className="sr-only">Cart</span>
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </header>
-      
       <main className="flex-1">
         <div className="container px-4 md:px-6 py-8">
           <div className="flex flex-col items-start space-y-4">
@@ -94,7 +71,6 @@ export default function ShoesPage() {
           </div>
         </div>
       </main>
-      
       <Footer />
     </div>
   );

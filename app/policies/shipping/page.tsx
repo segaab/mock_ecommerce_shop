@@ -1,42 +1,11 @@
-import Link from "next/link"
-import { ArrowLeft, ShoppingBag } from "lucide-react"
-
-import MainNav from "@/components/main-nav"
 import Footer from "@/components/footer"
-import { Button } from "@/components/ui/button"
 
 export default function ShippingPolicyPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-40 border-b bg-background">
-        <div className="container flex h-16 items-center justify-between py-4">
-          <div className="flex items-center gap-6 md:gap-10">
-            <Link href="/" className="flex items-center space-x-2">
-              <ShoppingBag className="h-6 w-6" />
-              <span className="font-bold inline-block">ACME Store</span>
-            </Link>
-            <MainNav />
-          </div>
-          <div className="flex items-center gap-4">
-            <Link href="/checkout">
-              <Button variant="outline" size="icon">
-                <ShoppingBag className="h-5 w-5" />
-                <span className="sr-only">Cart</span>
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </header>
       <main className="flex-1">
-        <div className="container px-4 py-8 md:py-12">
-          <div className="mb-8">
-            <Link href="/" className="flex items-center text-sm text-muted-foreground hover:text-foreground">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Home
-            </Link>
-            <h1 className="mt-4 text-3xl font-bold">Shipping Policy</h1>
-          </div>
-
+        <div className="container py-16">
+          <h1 className="mb-8 text-3xl font-bold">Shipping Policy</h1>
           <div className="prose max-w-none">
             <h2>Our Shipping Policy</h2>
             <p>

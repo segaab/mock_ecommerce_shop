@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { CartProvider } from "@/contexts/CartContext"
+import SiteHeader from "@/components/site-header"
 
 export const metadata: Metadata = {
   title: 'v0 App',
@@ -15,9 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="min-h-screen bg-background font-sans antialiased">
         <CartProvider>
-          {children}
+          <div className="relative flex min-h-screen flex-col">
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+          </div>
         </CartProvider>
       </body>
     </html>

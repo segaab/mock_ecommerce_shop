@@ -1,5 +1,6 @@
 "use client"
 
+import * as React from "react"
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -10,6 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import MainNav from "@/components/main-nav"
 import Footer from "@/components/footer"
 import { useCart } from "@/contexts/CartContext"
+import CartSlideOut from "@/components/cart-slide-out"
 
 export interface ProductPageProps {
   product: {
@@ -37,25 +39,6 @@ export default function ProductPage({ product }: ProductPageProps) {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-40 border-b bg-background">
-        <div className="container flex h-16 items-center justify-between py-4">
-          <div className="flex items-center gap-6 md:gap-10">
-            <Link href="/" className="flex items-center space-x-2">
-              <ShoppingBag className="h-6 w-6" />
-              <span className="font-bold inline-block">ACME Store</span>
-            </Link>
-            <MainNav />
-          </div>
-          <div className="flex items-center gap-4">
-            <Link href="/checkout">
-              <Button variant="outline" size="icon">
-                <ShoppingBag className="h-5 w-5" />
-                <span className="sr-only">Cart</span>
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </header>
       <main className="flex-1">
         <div className="container px-4 py-8 md:py-12">
           <div className="grid gap-8 md:grid-cols-2">
